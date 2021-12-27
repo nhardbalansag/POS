@@ -1,0 +1,15 @@
+POS
+
+expected system output reporting
+ - income
+ - profit
+ - inventory
+ - expenses
+
+
+MASTER MODULES
+- page master
+- store type
+- status
+- address
+- currency
