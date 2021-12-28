@@ -13,3 +13,147 @@ MASTER MODULES
 - status
 - address
 - currency
+
+
+
+
+POS
+
+pos
+-transction
+-print recpt
+-print hardcopy weekly/mnth transction
+- search by date/trnsctn#
+- view income&profit by date/ mnth
+
+Employee
+-add/edit/delte info
+- attendance
+- cash advnce
+- salary
+
+Product
+- add/edit/delete info
+- price wsp/rsp/phunan mismo
+
+History
+- view / search by date /t#
+- print by week/mnth
+
+#########################################################
+
+status_master
+    title
+
+color_category_master
+    name
+    description
+    status_id
+
+business_category_master -  (example: retail, wholesale)
+    title
+    acronym
+    description
+    status_id - fk
+
+dimension_master
+    title
+    acronym
+    status_id - fk
+
+unit_master
+    title
+    acronym
+    description
+    status_id - fk
+
+role_master
+    title
+    acronym
+    description
+    status_id - fk
+
+store_location_master
+    title
+    description
+    address
+    city
+    status_id - fk
+
+user
+    firstname
+    lastname
+    middlename
+    birthday
+    address
+    username
+    password
+    status_id -fk
+    role_id - fk
+
+Product_category
+    title
+    description
+    status_id
+
+market_source
+    name
+    description
+    status_id - fk
+    store_location_id - fk
+
+Product
+    product_name
+    product_code
+    description
+    total_cost_price
+    quantity_in
+    d_data
+    dimension_id - fk
+    unit_id - fk
+    market_source_id - fk
+    product_category_id -fk
+    status_id - fk
+
+transaction_category
+    transaction_category_title
+    acronym
+    description
+    selling_price
+    Product_id - fk
+    business_category_id - fk
+    unit_id - fk
+    status_id - fk
+
+store_information
+    store_name
+    description
+    status_id - fk
+    store_location_id - fk
+
+registered_store_product
+    Product_category_id - fk
+    store_information_id - fk
+    Product_id - fk
+
+assigned_store_users
+    users_id - fk
+    store_information_id - fk
+
+store_transaction
+    transaction_number
+    quantity_out
+    customer_name
+    users_id - fk
+    transaction_category_id - fk
+    business_category_id - fk
+    status_id - fk
+
+receipts
+    store_transaction_id - fk
+##############################################
+
+
+
+
+
